@@ -1,0 +1,15 @@
+body {
+    
+}
+
+div {
+    /*white-space: pre-wrap; /* css-3 */
+    background-color: cornflowerblue;
+    white-space: pre-wrap;
+    word-break: keep-all;
+    width: 17%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    
+}
