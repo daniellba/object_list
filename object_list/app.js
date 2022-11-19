@@ -1,5 +1,93 @@
 'use strict';
 
+/*// Nested Object Destructuring in JavaScript
+const object = {
+
+        id:  1 ,
+        name:  "google" ,
+        url:  "www.google.co.il",
+        subdata: ''
+}
+
+const { object: id, name, url, subdata } = object
+console.log(object)
+
+//console.log(object.subdata)
+document.getElementById("objPrint").innerHTML = JSON.stringify(object, null, 2);
+document.getElementById("subdata").innerHTML = JSON.stringify(subdata, null, 2);
+*/
+
+
+
+
+var objectArr = new Array(50);
+var i = 1, object = {};
+function addObjManually(_name, _subdata)
+{
+    object = {
+
+        id: i,
+        name: _name,
+        url: "www." + _name + ".co.il",
+        subdata: _subdata
+    }
+    objectArr[i - 1] = object;
+    i++;
+}
+
+var nameVar = "google", subdataVar = "subData{";
+addObjManually(nameVar, subdataVar)
+
+var nameVar = "walla", subdataVar = '';
+addObjManually(nameVar, subdataVar)
+
+var nameVar = "ynet", subdataVar = "subData{";
+addObjManually(nameVar, subdataVar)
+
+var nameVar = "mako", subdataVar = '';
+addObjManually(nameVar, subdataVar)
+
+console.log(objectArr)
+document.getElementById("objGoogle").innerHTML = JSON.stringify(objectArr[0], null, 2);
+document.getElementById("objWalla").innerHTML = JSON.stringify(objectArr[1], null, 2);
+document.getElementById("objYnet").innerHTML = JSON.stringify(objectArr[2], null, 2);
+document.getElementById("objMako").innerHTML = JSON.stringify(objectArr[3], null, 2);
+
+
+
+/*var objectArr = new Array(50), object = {}, i = 0;
+function addObjEle(_name, _subdata)
+{
+    for (i; i < objectArr.length; i++)
+    {
+        object =
+        {
+            id: i,
+            name: _name,
+            url: "www." + _name + ".co.il",
+            subdata: _subdata
+        }
+        objectArr[objectArr.length] = object;
+    }
+}
+var nameVar = "google", subdataVar = '';
+addObjEle(nameVar, subdataVar)
+
+const { objectArr: id, name, url, subdata } = objectArr
+console.log(objectArr[0])
+//console.log(object.subdata)
+
+document.getElementById("objPrint").innerHTML = JSON.stringify(object, null, 2);
+document.getElementById("subdata").innerHTML = JSON.stringify(subdata, null, 2);*/
+
+
+
+
+
+
+
+
+/*
 //adding it manually o/c its not effective.
 let objectListData =
 {
@@ -16,8 +104,7 @@ objectListData[objectListData.length] =
 };
 
 document.getElementById("arrPrint").innerHTML = JSON.stringify(objectListData, null, 2);
-
-//tried to write the json to a var using function; it is easy to spot the similarity of the data.
+*/
 
 /*var name = 'google', subData = '';
 var url = 'www.' + name + '.co.il';

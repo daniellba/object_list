@@ -2,14 +2,44 @@ body {
     
 }
 
-div {
-    /*white-space: pre-wrap; /* css-3 */
-    background-color: cornflowerblue;
-    white-space: pre-wrap;
-    word-break: keep-all;
-    width: 17%;
-    height: 100%;
-    padding: 15px;
+ol {
+    list-style-type: none;
     border-radius: 25px;
-    
+    padding: 15px;
+}
+
+    ol li {
+        background-color: dodgerblue;
+        border-radius: 25px;
+        padding: 15px;
+    }
+
+ol li ol li {     
+}
+
+/*targeting spcific tag - using class*/
+    ol.main {
+        list-style-type: none;
+        background-color: lightblue;
+        white-space: pre-wrap;
+        word-break: keep-all;
+        width: 20%;
+        padding: 15px;
+        border-radius: 25px;
+        border: 1px solid #000000
+    }
+
+/*targeting spcific tag - using id*/
+li#objGoogle {
+
+}
+
+li#objWalla {
+
+}
+
+li#objYnet {
+}
+
+li#objMako {
 }
